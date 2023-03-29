@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ProfileContainer = styled.div`
-  margin-top: -6rem;
   background: ${(props) => props.theme['base-profile']};
 
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.2);
@@ -12,6 +11,9 @@ export const ProfileContainer = styled.div`
   display: grid;
   grid-template-columns: 148px 1fr;
   gap: 32px;
+
+  position: relative;
+  transform: translateY(-5rem);
 `
 
 export const AvatarUser = styled.div`
