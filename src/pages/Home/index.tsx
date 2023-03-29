@@ -1,10 +1,11 @@
-import { Header } from '../../components/Header'
 import { Profile } from '../../components/Profile'
+import { SearchInput } from './components/SearchInput'
 
 export function Home() {
   return (
-    <div>
+    <div className="container">
       <Profile />
+      <SearchInput />
     </div>
   )
 }
