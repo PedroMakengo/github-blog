@@ -2,7 +2,7 @@ import { CardContainer, HeaderCard } from './styles'
 
 export function Card() {
   return (
-    <CardContainer>
+    <CardContainer to="/details">
       <HeaderCard>
         <h2>JavaScript data types and data structures</h2>
         <span>Há 1 dia</span>
