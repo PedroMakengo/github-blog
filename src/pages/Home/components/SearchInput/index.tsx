@@ -1,9 +1,13 @@
-import { SearchInputContainer } from './styles'
+import { SearchInputContainer, ContentSearch } from './styles'
 
 export function SearchInput() {
   return (
     <SearchInputContainer action="">
-      <input type="text" />
+      <ContentSearch>
+        <span>Publicações</span>
+        <span>6 publicações</span>
+      </ContentSearch>
+      <input type="text" placeholder="Buscar conteúdo" />
     </SearchInputContainer>
   )
 }
