@@ -24,3 +24,11 @@ export const ContentSearch = styled.div`
   display: flex;
   justify-content: space-between;
 `
+
+export const CardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  margin-top: 48px;
+`
