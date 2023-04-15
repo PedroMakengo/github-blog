@@ -7,4 +7,29 @@ export const PostInfoContainer = styled.div`
   border-radius: 10px;
 
   transform: translateY(-5rem);
+
+  h3 {
+    font-size: 24px;
+    margin-block: 1rem;
+    color: ${(props) => props.theme['white']};
+  }
+`
+
+export const PostHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: ${(props) => props.theme['blue']};
+    text-decoration: none;
+  }
+`
+
+export const PostListInfo = styled.div`
+  display: flex;
+  gap: 2rem;
+
+  span {
+    color: ${(props) => props.theme['base-span']};
+  }
 `

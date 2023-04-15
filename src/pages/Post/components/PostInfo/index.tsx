@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom'
-import { PostInfoContainer } from './styles'
+import { PostInfoContainer, PostHeader, PostListInfo } from './styles'
 
 export function PostInfo() {
   return (
     <PostInfoContainer className="container">
-      <div>
+      <PostHeader>
         <Link to="/">Voltar</Link>
         <a href="#">Ver no Github</a>
-      </div>
+      </PostHeader>
       <h3>JavaScript data types and data structures</h3>
-      <div>
+      <PostListInfo>
         <span>cameronwll</span>
         <span>Há 1 dia</span>
         <span>5 comentários</span>
-      </div>
+      </PostListInfo>
     </PostInfoContainer>
   )
 }
