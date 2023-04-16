@@ -19,6 +19,13 @@ export const ProfileContainer = styled.div`
 export const AvatarUser = styled.div`
   width: 100%;
   height: 148px;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 6px;
+  }
 `
 
 export const AvatarContent = styled.div`
@@ -58,5 +65,15 @@ export const InfoGithub = styled.div`
   a {
     color: ${(props) => props.theme['base-subtitle']};
     text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+      color: ${(props) => props.theme['base-label']};
+    }
   }
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-export const CardContainer = styled(Link)`
+export const PostContainer = styled(Link)`
   background: ${(props) => props.theme['base-post']};
   padding: 32px;
 
@@ -18,7 +18,7 @@ export const CardContainer = styled(Link)`
   }
 `
 
-export const HeaderCard = styled.div`
+export const HeaderPost = styled.div`
   display: grid;
   grid-template-columns: 1fr 20%;
   margin-bottom: 1rem;
