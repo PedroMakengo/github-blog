@@ -58,11 +58,11 @@ export const HeaderContent = styled.div`
   }
 `
 
-export const InfoGithub = styled.div`
+export const InfoGithub = styled.ul`
   display: flex;
   gap: 1.5rem;
 
-  a {
+  li {
     color: ${(props) => props.theme['base-subtitle']};
     text-decoration: none;
 

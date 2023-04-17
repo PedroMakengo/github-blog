@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const PostContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 3rem;
 `

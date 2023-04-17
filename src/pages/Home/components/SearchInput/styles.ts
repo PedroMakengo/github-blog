@@ -9,6 +9,7 @@ export const SearchInputContainer = styled.form`
     border-radius: 6px;
 
     margin-top: 12px;
+    color: ${(props) => props.theme['base-title']};
 
     &::placeholder {
       font-family: 'Nunito';

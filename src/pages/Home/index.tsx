@@ -33,7 +33,6 @@ export function Home() {
         const response = await api.get(
           `/search/issues?q=${query}%20repo:${username}/${repoName}`
         )
-
         setPosts(response.data.items)
       } finally {
         setIsLoading(false)
@@ -46,22 +45,20 @@ export function Home() {
     getPosts()
   }, [])
   return (
-    <>
+    <div className="container">
+      <Profile />
+
+      <SearchInput postsLength={posts.length} getPosts={getPosts} />
+
       {isLoading ? (
         <Spinner />
       ) : (
-        <div className="container">
-          <Profile />
-
-          <SearchInput postsLength={posts.length} getPosts={getPosts} />
-
-          <PostContainer>
-            {posts.map((post) => {
-              return <Post key={post.number} post={post} />
-            })}
-          </PostContainer>
-        </div>
+        <PostContainer>
+          {posts.map((post) => {
+            return <Post key={post.number} post={post} />
+          })}
+        </PostContainer>
       )}
-    </>
+    </div>
   )
 }

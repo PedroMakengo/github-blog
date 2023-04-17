@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const SpinnerContainer = styled.div`
   margin: 0 auto;
   align-self: center;
-  align-items: center;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   > div {
     width: 2rem;
