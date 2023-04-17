@@ -3,11 +3,11 @@ import { useState, useCallback, useEffect } from 'react'
 import { Profile } from '../../components/Profile'
 import { Post } from './components/Post'
 import { SearchInput } from './components/SearchInput'
-import { CardContainer } from './components/SearchInput/styles'
 import { api } from '../../lib/axios'
 import { Spinner } from '../../components/Spinner'
+import { PostContainer } from './styles'
 
-const username = import.meta.env.VITE_GITHUB
+const username = import.meta.env.VITE_GITHUB_USERNAME
 const repoName = import.meta.env.VITE_GITHUB_REPONAME
 
 export interface IPost {
@@ -55,11 +55,11 @@ export function Home() {
 
           <SearchInput postsLength={posts.length} getPosts={getPosts} />
 
-          <CardContainer>
+          <PostContainer>
             {posts.map((post) => {
               return <Post key={post.number} post={post} />
             })}
-          </CardContainer>
+          </PostContainer>
         </div>
       )}
     </>

@@ -14,7 +14,7 @@ import { faBuilding, faUserGroup } from '@fortawesome/free-solid-svg-icons'
 import { api } from '../../lib/axios'
 import { Spinner } from '../Spinner'
 
-const username = import.meta.env.GITHUB_USERNAME
+const username = import.meta.env.VITE_GITHUB_USERNAME
 
 interface ProfileData {
   login: string
@@ -42,47 +42,43 @@ export function Profile() {
 
   useEffect(() => {
     getProfileData()
-  })
+  }, [])
 
   return (
     <>
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <ProfileContainer className="container">
-          <AvatarUser>
-            <img src={profileData.avatar_url} alt="" />
-          </AvatarUser>
+      <ProfileContainer className="container">
+        <AvatarUser>
+          <img src={profileData.avatar_url} alt="" />
+        </AvatarUser>
 
-          <AvatarContent>
-            <HeaderContent>
-              <h1>{profileData.name}</h1>
-              <a href={profileData.html_url} target="_blank">
-                Github
-              </a>
-            </HeaderContent>
-            <p>{profileData.bio}</p>
+        <AvatarContent>
+          <HeaderContent>
+            <h1>{profileData.name}</h1>
+            <a href={profileData.html_url} target="_blank">
+              Github
+            </a>
+          </HeaderContent>
+          <p>{profileData.bio}</p>
 
-            <InfoGithub>
+          <InfoGithub>
+            <a href="#">
+              <FontAwesomeIcon icon={faGithub} />
+              {profileData.login}
+            </a>
+            {profileData?.company && (
               <a href="#">
-                <FontAwesomeIcon icon={faGithub} />
-                {profileData.login}
+                <FontAwesomeIcon icon={faBuilding} />
+                Ellonet
               </a>
-              {profileData?.company && (
-                <a href="#">
-                  <FontAwesomeIcon icon={faBuilding} />
-                  Ellonet
-                </a>
-              )}
+            )}
 
-              <a href="#">
-                <FontAwesomeIcon icon={faUserGroup} />
-                {profileData.followers} seguidores
-              </a>
-            </InfoGithub>
-          </AvatarContent>
-        </ProfileContainer>
-      )}
+            <a href="#">
+              <FontAwesomeIcon icon={faUserGroup} />
+              {profileData.followers} seguidores
+            </a>
+          </InfoGithub>
+        </AvatarContent>
+      </ProfileContainer>
     </>
   )
 }

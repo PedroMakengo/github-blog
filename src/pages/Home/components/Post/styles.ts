@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const PostContainer = styled(Link)`
+  /* width: 50%; */
   background: ${(props) => props.theme['base-post']};
   padding: 32px;
 
@@ -15,6 +16,8 @@ export const PostContainer = styled(Link)`
     font-size: 16px;
     font-weight: 400;
     line-height: 160%;
+
+    display: none;
   }
 `
 
