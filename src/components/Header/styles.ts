@@ -16,4 +16,12 @@ export const HeaderContainer = styled.header`
   img {
     width: 10%;
   }
+
+  @media (max-width: 760px) {
+    height: 210px;
+    padding-top: 35px;
+    img {
+      width: 30%;
+    }
+  }
 `

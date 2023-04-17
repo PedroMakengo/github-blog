@@ -13,6 +13,10 @@ export const PostInfoContainer = styled.div`
     margin-block: 1rem;
     color: ${(props) => props.theme['white']};
   }
+
+  @media (max-width: 760px) {
+    padding: 1.5rem;
+  }
 `
 
 export const PostHeader = styled.div`
@@ -28,8 +32,17 @@ export const PostHeader = styled.div`
 export const PostListInfo = styled.div`
   display: flex;
   gap: 2rem;
+  list-style: none;
 
-  span {
+  @media (max-width: 760px) {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  li {
     color: ${(props) => props.theme['base-span']};
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
   }
 `

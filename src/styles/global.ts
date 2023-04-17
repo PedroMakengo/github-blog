@@ -27,5 +27,10 @@ body, input, textarea, button{
   width: 864px;
 
   margin: 0 auto;
+
+  
+  @media (max-width: 760px) {
+    width: 90%;
+  }
 }
 `

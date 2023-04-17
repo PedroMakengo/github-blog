@@ -14,17 +14,40 @@ export const ProfileContainer = styled.div`
 
   position: relative;
   transform: translateY(-5rem);
+
+  @media (max-width: 760px) {
+    display: block;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    width: 100%;
+  }
 `
 
 export const AvatarUser = styled.div`
   width: 100%;
-  height: 148px;
+  margin-bottom: 2rem;
 
   img {
     width: 100%;
     height: 100%;
 
     border-radius: 6px;
+  }
+
+  @media (max-width: 760px) {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+
+    img {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+    }
   }
 `
 
@@ -40,6 +63,10 @@ export const AvatarContent = styled.div`
     margin: 8px 0 24px 0;
     font-size: 1rem;
     line-height: 160%;
+
+    @media (max-width: 760px) {
+      width: 100%;
+    }
   }
 `
 
@@ -61,6 +88,7 @@ export const HeaderContent = styled.div`
 export const InfoGithub = styled.ul`
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 
   li {
     color: ${(props) => props.theme['base-subtitle']};

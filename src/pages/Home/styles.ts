@@ -7,4 +7,7 @@ export const PostContainer = styled.div`
 
   gap: 1rem;
   margin-top: 3rem;
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
 `

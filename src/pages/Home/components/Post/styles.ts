@@ -7,6 +7,10 @@ export const PostContainer = styled(Link)`
   padding: 32px;
   height: 16.25rem;
 
+  @media (max-width: 760px) {
+    width: 100%;
+  }
+
   border-radius: 10px;
   color: ${(props) => props.theme['base-label']};
   text-decoration: none;
